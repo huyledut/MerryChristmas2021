@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+        function Func(){
+            var index = document.form55.select1.selectedIndex;
+            document.form55.txt1.value= index;
+        }
+    </script>
+</head>
+<body>
+    <form  style="text-align: center;"name="form55">
+        <select name="select1" id="">
+            <option value="">Index 0</option>
+            <option value="">Index 1</option>
+            <option value="">Index 2</option>
+            <option value="">Index 3</option>
+        </select>
+        <input type="text" name="txt1" placeholder="Hiện chỉ mục bạn chọn">
+        <input type="button" value="Click here" onclick="Func()">
+    </form>
+</body>
+</html>

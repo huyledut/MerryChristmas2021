@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+        function changeText()
+        {
+            var s =document.form33.txt1.value;
+            var tmp="";        
+            for(var i=0;i<s.length;i++)
+            {
+                if(s.charAt(i) >= 'A' && s.charAt(i) <='Z') tmp+=String.fromCharCode(s.charCodeAt(i)+32);
+                else if(s.charAt(i) >= 'a' && s.charAt(i) <= 'z') tmp+=String.fromCharCode(s.charCodeAt(i)-32);
+                else tmp +=s.charAt(i);
+            }
+            document.form33.txt2.value=tmp;
+        }
+    </script>
+</head>
+<body onload="document.form33.txt1.focus()">
+   <form style="text-align: center;" name="form33">
+        <input type="text" name="txt1" placeholder="Nhập dữ liệu" onblur="changeText()">
+        <input type="text"name="txt2" placeholder="Biến đổi chữ hoa/thường">
+   </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+        function Func(){
+            var index = document.form44.txt1.value;
+            if(index > 3 || index < 0) alert("Chỉ số bạn nhập không hợp lệ!");
+            else document.form44.select1.selectedIndex =index;
+        }
+    </script>
+</head>
+<body onload="document.form44.txt1.focus()">
+    <form style="text-align: center;" name="form44">
+        <select name="select1" id="">
+            <option value="">Index 0</option>
+            <option value="">Index 1</option>
+            <option value="">Index 2</option>
+            <option value="">Index 3</option>
+        </select>
+        <input style="width: 110px;" type="text" name="txt1" placeholder="Nhập chỉ số" >
+        <input type="button" value="Click here" onclick="Func()">
+    </form>
+</body>
+</html>
